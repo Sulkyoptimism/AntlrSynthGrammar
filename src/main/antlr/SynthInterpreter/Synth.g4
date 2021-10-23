@@ -28,15 +28,13 @@ line_list
     ;
 
 association
-    : Identifier Associate Identifier
+    : Identifier Associate memberIdentifier
     ;
 
 initiator
     : Identifier LPar assignment_list RPar
     ;
  
-
-
 assignment
     : Identifier '=' Identifier
     | FreqFlag '=' Number
@@ -48,15 +46,19 @@ assignment_list
     : assignment (',' assignment)*
     ;
 
+memberIdentifier
+    : Identifier Period FreqFlag
+    ;
+
 
 Wavetype
     : Sinewave
-    | TriangleWave
+    | Trianglewave
     | Squarewave
     | Sawwave
     ;
-    
-    
+
+
 //common tokens
 Assign      :       '='                 ;
 Associate   :       '->'                ;
@@ -69,11 +71,10 @@ FreqFlag    :       'Freq'              ;
 WaveFlag    :       'Wave'              ;
 Sinewave    :       'Sine'              ;
 Squarewave  :       'Square'            ;
-TriangleWave:       'Triangle'          ;
+Trianglewave:       'Triangle'          ;
 Sawwave     :       'Saw'               ;
 WS          :   [ \t\r]+ -> skip        ;
 NewLine     :   ['\r'? '\n' | '\r']+    ;
-Number      :   [0-9]+                  ;
-Identifier  :   [A-Za-z0-9_.]+          ;
-
+Number      :       [0-9]+              ;
+Identifier  :     [A-Za-z0-9_]+         ;
 
