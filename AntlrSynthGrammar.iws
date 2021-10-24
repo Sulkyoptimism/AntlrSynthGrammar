@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="386397fb-b069-4af8-9b14-340ebbd19f3b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/AntlrSynthGrammar.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/AntlrSynthGrammar.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AntlrSynthGrammar.iws" beforeDir="false" afterPath="$PROJECT_DIR$/AntlrSynthGrammar.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/Synth.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/Synth.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/Synth.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/Synth.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthBaseVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthLexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthPrintVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthPrintVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntlrSynthGrammar/SynthInterpreter/SynthVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/antlr/SynthInterpreter/Synth.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/antlr/SynthInterpreter/Synth.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/synthexample.syn" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/synthexample.syn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +55,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -198,8 +190,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/build/generated-src/antlr/main/main.java</url>
-          <line>23</line>
+          <line>26</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/build/generated-src/antlr/main/SynthInterpreter/SynthJsonVisitor.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -213,6 +210,8 @@
         <watch expression="tree.children.get(1)" />
         <watch expression="tree.children.get(1)" />
         <watch expression="((Line_listContext)((ArrayList)((DescriptionContext)tree.children.get(1)).children).get(0)).children" custom="SynthInterpreter.SynthParser.Line_listContext,SynthInterpreter.SynthParser.DescriptionContext,java.util.ArrayList" />
+        <watch expression="synj.lfos" />
+        <watch expression="synj.lfos" />
       </configuration>
     </watches-manager>
   </component>
