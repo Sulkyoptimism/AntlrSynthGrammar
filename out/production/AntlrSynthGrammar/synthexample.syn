@@ -1,4 +1,5 @@
 Synth:
+    Poly = False
     Gen1 = Gen(Wave = Sine)
     LFO1 = LFO(Freq = 1, Wave = Triangle)
     LFO1 -> Gen1.Freq

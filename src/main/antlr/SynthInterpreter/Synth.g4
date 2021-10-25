@@ -37,9 +37,19 @@ initiator
  
 assignment
     : Identifier '=' Identifier
+    | poly_assignment
     | FreqFlag '=' Number
     | WaveFlag '=' Wavetype
-    | Identifier '=' initiator
+    | initiator_assignment
+    ;
+
+
+poly_assignment
+    : PolyFlag '=' boolid
+    ;
+
+initiator_assignment
+    : Identifier '=' initiator
     ;
 
 assignment_list
@@ -50,6 +60,10 @@ memberIdentifier
     : Identifier Period FreqFlag
     ;
 
+boolid
+    : TrueBool
+    | FalseBool
+    ;
 
 Wavetype
     : Sinewave
@@ -57,6 +71,7 @@ Wavetype
     | Squarewave
     | Sawwave
     ;
+
 
 
 //common tokens
@@ -67,12 +82,15 @@ Comma       :       ','                 ;
 LPar        :       '('                 ;
 RPar        :       ')'                 ;
 Period      :       '.'                 ;
+PolyFlag    :       'Poly'              ;
 FreqFlag    :       'Freq'              ;
 WaveFlag    :       'Wave'              ;
 Sinewave    :       'Sine'              ;
 Squarewave  :       'Square'            ;
 Trianglewave:       'Triangle'          ;
 Sawwave     :       'Saw'               ;
+TrueBool    :       'True'              ;
+FalseBool   :       'False'             ;
 WS          :   [ \t\r]+ -> skip        ;
 NewLine     :   ['\r'? '\n' | '\r']+    ;
 Number      :       [0-9]+              ;
