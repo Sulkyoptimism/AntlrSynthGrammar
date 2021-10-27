@@ -32,7 +32,17 @@ association
     ;
 
 initiator
-    : Identifier LPar assignment_list RPar
+    : voice_initiator
+    | lfo_initiator
+    ;
+
+
+voice_initiator
+    : GenKeyWord LPar assignment_list RPar
+    ;
+
+lfo_initiator
+    : LFOKeyWord LPar assignment_list RPar
     ;
  
 assignment
@@ -82,6 +92,8 @@ Comma       :       ','                 ;
 LPar        :       '('                 ;
 RPar        :       ')'                 ;
 Period      :       '.'                 ;
+GenKeyWord  :       'Gen'               ;
+LFOKeyWord  :       'LFO'               ;
 PolyFlag    :       'Poly'              ;
 FreqFlag    :       'Freq'              ;
 WaveFlag    :       'Wave'              ;
