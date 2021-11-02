@@ -31,6 +31,7 @@ sourceSets {
     }
 }
 compileJava.source sourceSets.generated.java, sourceSets.main.java
+mainClassName = 'generated-src.antlr.main.main'
 clean{
     delete "generated-src"
 }
